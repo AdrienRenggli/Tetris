@@ -307,7 +307,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
           // Update score or any other logic here
           score += 10;
-          scoreDisplay.textContent = score;
+          scoreDisplay.textContent = score.toString().padStart(4, '0');
 
           row -= width;
         }
