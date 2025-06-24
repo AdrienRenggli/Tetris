@@ -7,6 +7,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const grid = document.getElementById('grid');
     const overlay = document.getElementById('game-over-overlay');
     const restartBtn = document.getElementById('restart-button');
+    const startButton = document.getElementById('start-button');
+    const noKeyboardOverlay = document.getElementById('no-keyboard-overlay');
+
+    if (isMobileDevice()) {
+      noKeyboardOverlay.classList.remove('hidden');
+      startButton.disabled = true;
+    } else {
+      noKeyboardOverlay.classList.add('hidden');
+      startButton.disabled = false;
+    }
 
     for (let i = 0; i < 16; i++) {
       const div = document.createElement('div');
@@ -194,6 +204,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function canMoveDown() {
       return !current.some(index => cells[currentPosition + index + width].classList.contains('taken'));
+    }
+
+    function isMobileDevice() {
+      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     }
 
     // Controls
