@@ -199,6 +199,7 @@ h1 {
   background-color: #666;
 }
 
+/* No keyboard warning */
 #no-keyboard-overlay {
   position: fixed;
   top: 0; left: 0;
@@ -225,4 +226,33 @@ h1 {
   border-radius: 10px;
   background-color: #222;
   user-select: none;
+}
+
+#no-keyboard-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 1000;
+  overflow-y: auto;
+  color: white;
+  user-select: none;
+}
+
+.no-keyboard-content {
+  max-width: 480px;
+  width: 100%;
+  background-color: #222;
+  border: 3px solid white;
+  border-radius: 8px;
+  padding: 30px 20px;
+  text-align: center;
+  box-sizing: border-box;
 }
