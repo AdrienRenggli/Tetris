@@ -111,8 +111,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     let speed = 1000;
-    const speedStep = 5;
-    const minSpeed = 150;
+    const speedStep = 15;
+    const minSpeed = 200;
     let timerId = null;
     let currentPosition = 4;
     let currentRotation = 0;
@@ -171,6 +171,13 @@ document.addEventListener('DOMContentLoaded', () => {
         current.forEach(index => cells[currentPosition + index].classList.add('taken'));
 
         checkCompletedRows();
+
+        if (speed > minSpeed) {
+          speed -= speedStep;
+        }
+
+        clearInterval(timerId);
+        timerId = setInterval(moveDown, speed);
 
         currentPosition = 4;
         currentRotation = 0;
