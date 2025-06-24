@@ -1,0 +1,200 @@
+/* Base styles */
+body {
+  font-family: 'Press Start 2P', cursive;
+  display: flex;
+  justify-content: center;
+  background: #111;
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
+
+#game-title {
+  font-size: 48px;
+  display: flex;
+  gap: 8px;
+  user-select: none;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+#game-title span:nth-child(1) { /* T */ color: purple; }
+#game-title span:nth-child(2) { /* e */ color: orange; }
+#game-title span:nth-child(3) { /* t */ color: purple; }
+#game-title span:nth-child(4) { /* r */ color: red; }
+#game-title span:nth-child(5) { /* i */ color: cyan; }
+#game-title span:nth-child(6) { /* s */ color: green; }
+
+/* Game container layout */
+.game {
+  position: relative;
+  display: flex;
+  gap: 20px;
+}
+
+/* Main section (title + grid) */
+.main-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+h1 {
+  margin: 0 0 10px 0;
+  font-size: 32px;
+  color: white;
+}
+
+/* Main game grid */
+#grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(10, 30px);
+  grid-template-rows: repeat(20, 30px);
+  width: 300px;
+  height: 600px;
+  background-color: #222;
+  border: 2px solid white;
+  box-sizing: content-box;
+  z-index: 2;
+}
+
+#grid div {
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  border: 1px solid #333;
+  position: relative;
+  z-index: 1;
+}
+
+#grid div.taken.floor {
+  visibility: hidden;
+}
+
+/* Tetromino colors */
+.tetromino { background-color: white; }
+
+.tetromino.j { background-color: blue; }
+.tetromino.z { background-color: red; }
+.tetromino.t { background-color: purple; }
+.tetromino.o { background-color: yellow; }
+.tetromino.i { background-color: cyan; }
+.tetromino.s { background-color: green; }
+.tetromino.l { background-color: orange; }
+
+/* Side panel */
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 600px; /* Match grid height */
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+/* Score */
+.info h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+/* Next Tetromino Preview */
+#next-container {
+  text-align: center;
+}
+
+#next-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 30px);
+  grid-template-rows: repeat(4, 30px);
+  gap: 1px;
+  width: 122px;
+  height: 122px;
+  background-color: #222;
+  border: 2px solid #555;
+  margin-top: 10px;
+}
+
+#next-grid div {
+  width: 30px;
+  height: 30px;
+  background-color: #111;
+  border: 1px solid #333;
+}
+
+/* Preview tetromino colors */
+.preview {
+  background-color: white;
+}
+
+#next-grid .preview.j { background-color: blue; }
+#next-grid .preview.z { background-color: red; }
+#next-grid .preview.t { background-color: purple; }
+#next-grid .preview.o { background-color: yellow; }
+#next-grid .preview.i { background-color: cyan; }
+#next-grid .preview.s { background-color: green; }
+#next-grid .preview.l { background-color: orange; }
+
+
+/* Start button */
+#start-button {
+  font-family: 'Press Start 2P', cursive;
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #444;
+  color: white;
+  border: 2px solid #888;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#start-button:hover {
+  background-color: #666;
+}
+
+#game-over-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  color: white;
+  user-select: none;
+}
+
+#game-over-overlay.hidden {
+  display: none;
+}
+
+.game-over-content {
+  text-align: center;
+  border: 3px solid white;
+  padding: 30px 50px;
+  background-color: rgba(34, 34, 34, 0.85);
+  border-radius: 8px;
+}
+
+#restart-button {
+  margin-top: 20px;
+  font-size: 16px;
+  padding: 8px 20px;
+  cursor: pointer;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Press Start 2P', cursive;
+  transition: background-color 0.3s ease;
+}
+
+#restart-button:hover {
+  background-color: #666;
+}

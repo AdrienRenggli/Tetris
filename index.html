@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tetris</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="game">
+
+    <div class="main-section">
+      <h1 id="game-title">
+        <span>T</span><span>e</span><span>t</span><span>r</span><span>i</span><span>s</span>
+      </h1>
+      <div id="grid"></div>
+    </div>
+
+    <div class="info">
+      <h2>Score: <span id="score">0</span></h2>
+      <div id="next-container">
+        <h3>Next</h3>
+        <div id="next-grid"></div>
+      </div>
+      <button id="start-button">Start</button>
+    </div>
+
+  </div>
+
+  <div id="game-over-overlay" class="hidden">
+    <div class="game-over-content">
+      <h2>Game Over</h2>
+      <button id="restart-button">Restart</button>
+    </div>
+  </div>
+
+  <script src="js/tetris.js"></script>
+</body>
+</html>
