@@ -18,9 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
       startButton.disabled = false;
     }
 
-      noKeyboardOverlay.classList.remove('hidden');
-      startButton.disabled = true;
-
     for (let i = 0; i < 16; i++) {
       const div = document.createElement('div');
       nextGrid.appendChild(div);
