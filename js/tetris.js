@@ -18,6 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
       startButton.disabled = false;
     }
 
+      noKeyboardOverlay.classList.remove('hidden');
+      startButton.disabled = true;
+
     for (let i = 0; i < 16; i++) {
       const div = document.createElement('div');
       nextGrid.appendChild(div);
@@ -43,9 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const tetrominoes = [
       // J 
       [
-        [1, width + 1, width * 2 + 1, 2], // J 0
-        [width, width + 1, width + 2, width * 2 + 2], // J -90
-        [1, width + 1, width * 2 + 1, width * 2], // L 0
+        [1, width + 1, width * 2 + 1, 2],
+        [width, width + 1, width + 2, width * 2 + 2],
+        [1, width + 1, width * 2 + 1, width * 2],
         [width, width * 2, width * 2 + 1, width * 2 + 2]
       ],
       // Z
@@ -182,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
         draw();
         showNext();
 
-        checkGameOver(); // <-- check for game over right after spawning
+        checkGameOver();
       }
     }
 
@@ -302,7 +305,6 @@ document.addEventListener('DOMContentLoaded', () => {
           score += 10;
           scoreDisplay.textContent = score;
 
-          // Because we removed a row, restart checking from the top row
           row -= width;
         }
       }
