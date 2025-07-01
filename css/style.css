@@ -18,12 +18,12 @@ body {
   justify-content: center;
 }
 
-#game-title span:nth-child(1) { /* T */ color: purple; }
-#game-title span:nth-child(2) { /* e */ color: orange; }
-#game-title span:nth-child(3) { /* t */ color: purple; }
-#game-title span:nth-child(4) { /* r */ color: red; }
-#game-title span:nth-child(5) { /* i */ color: cyan; }
-#game-title span:nth-child(6) { /* s */ color: green; }
+#game-title span:nth-child(1) { /* T */ color: #fd3f59; }
+#game-title span:nth-child(2) { /* e */ color: #ff910c; }
+#game-title span:nth-child(3) { /* t */ color: #fefb34; }
+#game-title span:nth-child(4) { /* r */ color: #39892f; }
+#game-title span:nth-child(5) { /* i */ color: #01edfa; }
+#game-title span:nth-child(6) { /* s */ color: #dd0ab2; }
 
 /* Game container layout */
 .game {
@@ -76,13 +76,13 @@ h1 {
 /* Tetromino colors */
 .tetromino { background-color: white; }
 
-.tetromino.j { background-color: blue; }
-.tetromino.z { background-color: red; }
-.tetromino.t { background-color: purple; }
-.tetromino.o { background-color: yellow; }
-.tetromino.i { background-color: cyan; }
-.tetromino.s { background-color: green; }
-.tetromino.l { background-color: orange; }
+.tetromino.j { background-color: #2e2e84; }
+.tetromino.z { background-color: #ea141c; }
+.tetromino.t { background-color: #dd0ab2; }
+.tetromino.o { background-color: #fefb34; }
+.tetromino.i { background-color: #01edfa; }
+.tetromino.s { background-color: #39892f; }
+.tetromino.l { background-color: #ff910c; }
 
 /* Side panel */
 .info {
@@ -129,14 +129,13 @@ h1 {
   background-color: white;
 }
 
-#next-grid .preview.j { background-color: blue; }
-#next-grid .preview.z { background-color: red; }
-#next-grid .preview.t { background-color: purple; }
-#next-grid .preview.o { background-color: yellow; }
-#next-grid .preview.i { background-color: cyan; }
-#next-grid .preview.s { background-color: green; }
-#next-grid .preview.l { background-color: orange; }
-
+#next-grid .preview.j { background-color: #2e2e84; }
+#next-grid .preview.z { background-color: #ea141c; }
+#next-grid .preview.t { background-color: #dd0ab2; }
+#next-grid .preview.o { background-color: #fefb34; }
+#next-grid .preview.i { background-color: #01edfa; }
+#next-grid .preview.s { background-color: #39892f; }
+#next-grid .preview.l { background-color: #ff910c; }
 
 /* Start button */
 #start-button {
